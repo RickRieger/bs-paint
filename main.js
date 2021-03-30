@@ -1,21 +1,22 @@
 /*******************
- * OUR HELPER CODE *
+* OUR HELPER CODE *
 *******************/
 
 /*
- * Here we add the squares to the canvas dynamically.
- * You can mostly leave this section alone!
- * But if you want to change how wide the canvas is,
- * there are just two steps:
- * 
- * 1. Change the `gridWidth` value below.
- * 2. Change the `grid-template-rows` and
- * `grid-template-columns` to match.
- *
- * To make the second one happen, the number to change
- * is the first argument to `repeat`, currently set at 10.
- */
-const gridWidth = 10;
+* Here we add the squares to the canvas dynamically.
+* You can mostly leave this section alone!
+* But if you want to change how wide the canvas is,
+* there are just two steps:
+* 
+* 1. Change the `gridWidth` value below.
+* 2. Change the `grid-template-rows` and
+* `grid-template-columns` to match.
+*
+* To make the second one happen, the number to change
+* is the first argument to `repeat`, currently set at 10.
+*/
+
+const gridWidth = 62;
 let count = 0;
 while (count <= gridWidth * gridWidth) {
   const canvas = document.querySelector('.canvas');
@@ -43,8 +44,13 @@ while (count <= gridWidth * gridWidth) {
 // You do not have to follow the sections below. If you're doing your functions inline, it doesn't make a lot of sense to separate the event listener functions from their wiring!
 
 /***********
- * QUERIES *
+* QUERIES *
 ***********/
+const brushColors = document.querySelectorAll('.palette-color');
+const paintBrush = document.querySelector('.current-brush');
+const canvasSquares = document.querySelectorAll('.square');
+let currentColor = 'color-2';
+let mouseDown = false;
 
 // Add queries for all your squares, palette colors, and brush here.
 // (Note the singular or plural used in that sentence!)
@@ -52,8 +58,49 @@ while (count <= gridWidth * gridWidth) {
 
 
 /****************************
- * EVENT LISTENER FUNCTIONS *
+* EVENT LISTENER FUNCTIONS *
 ****************************/
+document.addEventListener('mousedown', function(){
+  mouseDown = true;
+});
+
+document.addEventListener('mouseup', function(){
+  mouseDown = false;
+});
+
+for(const brushColor of brushColors){
+  
+  brushColor.addEventListener('click', function(){
+    
+    const color = brushColor.classList[1];
+    paintBrush.className = 'current-brush ' + color;
+    currentColor = color;
+    
+    
+  });
+}
+
+
+
+for (const square of canvasSquares){
+  square.addEventListener('click', squareClicked);
+
+}
+for (const square of canvasSquares){
+  square.addEventListener('mouseenter', squareMouseOver);
+
+}
+function squareClicked(event){
+  const square = event.target;
+  square.className = 'square ' + currentColor;
+}
+
+function squareMouseOver(event){
+  if(mouseDown === true){
+  const square = event.target;
+  square.className = 'square ' + currentColor;
+  }
+}
 
 // Now add some functions to handle clicking one particular square
 // and clicking one particular palette color. You can leave them
@@ -64,7 +111,7 @@ while (count <= gridWidth * gridWidth) {
 
 
 /**************************
- * WIRING IT ALL TOGETHER *
+* WIRING IT ALL TOGETHER *
 **************************/
 
 // Now: wiring up our event listeners to our html node elements.
