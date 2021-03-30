@@ -62,8 +62,8 @@ body{
   display:flex;
   justify-content: center;
   border-style: solid;
-  border-color: rgba(75, 44, 2, 0.7);
-  box-shadow: 0 0 10em rgba(70, 73, 233, 0.795);
+  border-color:black;
+  box-shadow: 0 0 10em rgba(3, 241, 241, 0.534);
   
 }
 .canvas {
@@ -98,4 +98,61 @@ body{
 
 .color-5 {
 background-color:grey;
+}
+.color-6 {
+  background-color:fuchsia;
+}
+
+.color-7 {
+  background-color:red;
+}
+
+.color-8 {
+  background-color:wheat;
+}
+
+.color-9 {
+  background-color:aqua;
+}
+
+.color-10 {
+background-color:lightsalmon;
+}
+.color-11 {
+  background-color:greenyellow;
+}
+
+.color-12 {
+  background-color:firebrick;
+}
+
+.color-13 {
+  background-color:blueviolet;
+}
+
+.color-14 {
+  background-color:green;
+}
+
+.color-15 {
+background-color:rosybrown;
+}
+.color-16 {
+  background-color:white;
+}
+
+.color-17 {
+  background-color:purple;
+}
+
+.color-18 {
+  background-color:blue;
+}
+
+.color-19 {
+  background-color:pink;
+}
+
+.color-20{
+background-color:black;
 }
