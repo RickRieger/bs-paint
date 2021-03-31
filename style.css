@@ -51,8 +51,6 @@ img{
 
 .brush {
   display: flex;
-  
-
 }
 
 .icon {
@@ -68,7 +66,7 @@ img{
   display:flex;
   border-style: solid;
   border-color:black;
-  box-shadow:  10px 10px 30em rgb(3 241 241);
+  box-shadow:  0px -20px 10em rgb(3 241 241);
   width:fit-content;
 }
 .canvas {
@@ -81,6 +79,9 @@ img{
   
 }
 
+
+
+/* all the small squares on the canvas */
 .square {
   transition: 0.5s;
 }
@@ -165,13 +166,10 @@ background-color:rosybrown;
 background-color:olivedrab;
 z-index: 1;
 }
-/* Dark mode */
 
-.lightMode{
-background-color: cornsilk;
-}
 
-/* Toggle Button  */
+
+/* Toggle Button */
 input[type=checkbox]{
 	height: 0;
 	width: 0;
@@ -213,12 +211,4 @@ input:checked + label:after {
 
 label:active:after {
 	width: 70px;
-}
-
-// centering
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
 }

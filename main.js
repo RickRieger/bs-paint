@@ -61,6 +61,7 @@ let mouseDown = false;
 /****************************
 * EVENT LISTENER FUNCTIONS *
 ****************************/
+
 document.addEventListener('mousedown', function(){
   mouseDown = true;
 });
@@ -76,8 +77,6 @@ for(const brushColor of brushColors){
     const color = brushColor.classList[1];
     paintBrush.className = 'current-brush ' + color;
     currentColor = color;
-    
-    
   });
 }
 
@@ -141,5 +140,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-let ed = document.querySelectorAll('.color-5');
-console.log(ed);
