@@ -118,3 +118,26 @@ function squareMouseOver(event){
 // You'll need to add the appropriate event listener for each
 // square and for each palette color from the functions you
 // wrote above.
+document.addEventListener('DOMContentLoaded', function () {
+  var checkbox = document.querySelector('input[type="checkbox"]');
+
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+      // do this
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('h3').style.color = 'black';
+      document.querySelector('.container').style.boxShadow = '0px -20px 10em rgb(255 255 0';
+
+
+
+    } else {
+      // do that
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('h3').style.color = '#e6e6e6';
+      document.querySelector('.container').style.boxShadow = '0px -20px 10em rgb(3 241 241';
+
+    }
+  });
+});
+let ed = document.querySelectorAll('.color-5');
+console.log(ed);

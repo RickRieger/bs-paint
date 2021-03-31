@@ -1,5 +1,5 @@
 body{
-  background-color: #0c0c0c;
+  background-color: #1e1d1d;
   display:flex;
   justify-content: center;
 }
@@ -30,6 +30,9 @@ body{
   align-items: center;
  
 }
+img{
+  z-index: 1;
+}
 
 .paint {
   height: 250px;
@@ -56,14 +59,13 @@ body{
 .current-brush, .palette-color {
   width: 30px;
   height: 30px;
-  border: 1px solid black;
 }
 .container{
   display:flex;
   justify-content: center;
   border-style: solid;
   border-color:black;
-  box-shadow: 0 0 10em rgba(3, 241, 241, 0.534);
+  box-shadow: 0px -20px 10em rgb(3 241 241);
   
 }
 .canvas {
@@ -72,7 +74,7 @@ body{
   grid-template-columns: repeat(90, 1fr);
   height: 70vh;
   width: 90vw;
-  background-color: grey;
+  background-color:black;
   
 }
 
@@ -82,6 +84,8 @@ body{
 
 .color-1 {
   background-color:lightblue;
+  z-index: 1;
+
 }
 
 .color-2 {
@@ -97,7 +101,8 @@ body{
 }
 
 .color-5 {
-background-color:grey;
+background-color:black;
+z-index: 1;
 }
 .color-6 {
   background-color:fuchsia;
@@ -154,5 +159,63 @@ background-color:rosybrown;
 }
 
 .color-20{
-background-color:black;
+background-color:olivedrab;
+z-index: 1;
+}
+/* Dark mode */
+
+.lightMode{
+background-color: cornsilk;
+}
+
+/* Toggle Button  */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+  
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 1.3px;
+	left: 1.3px;
+	width: 22.5px;
+	height:22.5px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background:black;
+}
+
+input:checked + label:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 70px;
+}
+
+// centering
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
