@@ -46,6 +46,7 @@ while (count <= gridWidth * gridWidth) {
 /***********
 * QUERIES *
 ***********/
+
 const brushColors = document.querySelectorAll('.palette-color');
 const paintBrush = document.querySelector('.current-brush');
 const canvasSquares = document.querySelectorAll('.square');
@@ -118,6 +119,7 @@ function squareMouseOver(event){
 // You'll need to add the appropriate event listener for each
 // square and for each palette color from the functions you
 // wrote above.
+
 document.addEventListener('DOMContentLoaded', function () {
   var checkbox = document.querySelector('input[type="checkbox"]');
 
