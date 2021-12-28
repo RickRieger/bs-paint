@@ -1,6 +1,7 @@
 # BudgetSoft Paint
+A quick look at my solution below.
 
-A very simple paint program.
+<img src="bs-paint.gif"/>
 
 
 ### Introduction

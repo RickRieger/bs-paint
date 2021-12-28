@@ -1,8 +1,8 @@
-body{
+body {
   background-color: black;
-  display:flex;
+  display: flex;
   justify-content: center;
-  height:100%;
+  height: 100%;
 }
 
 .app {
@@ -10,20 +10,25 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color:#e6e6e6;
+  color: #e6e6e6;
+  height: 90vh;
 }
-
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
 .headings {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size:2rem;
- 
-  
+  font-size: 2rem;
 }
-label{
-  color:blanchedalmond;
-  font-size: 2rem;;
+label {
+  color: blanchedalmond;
+  font-size: 2rem;
 }
 
 .brush-selection {
@@ -31,10 +36,9 @@ label{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
- 
+  margin-bottom: 10px;
 }
-img{
+img {
   z-index: 1;
 }
 
@@ -45,8 +49,10 @@ img{
 }
 
 .palette {
+  width: 100%;
   display: flex;
-
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .brush {
@@ -58,28 +64,26 @@ img{
   height: 30px;
 }
 
-.current-brush, .palette-color {
+.current-brush,
+.palette-color {
   width: 30px;
   height: 30px;
 }
-.container{
-  display:flex;
+.container {
+  display: flex;
   border-style: solid;
-  border-color:black;
-  box-shadow:  0px -20px 10em rgb(3 241 241);
-  width:fit-content;
+  border-color: black;
+  box-shadow: 0px -20px 10em rgb(3 241 241);
+  width: fit-content;
 }
 .canvas {
   display: grid;
   grid-template-rows: repeat(40, 1fr);
   grid-template-columns: repeat(90, 1fr);
-  height: 70vh;
+  height: 60vh;
   width: 90vw;
-  background-color:black;
-  
+  background-color: black;
 }
-
-
 
 /* all the small squares on the canvas */
 .square {
@@ -87,9 +91,8 @@ img{
 }
 
 .color-1 {
-  background-color:lightblue;
+  background-color: lightblue;
   z-index: 1;
-
 }
 
 .color-2 {
@@ -97,118 +100,121 @@ img{
 }
 
 .color-3 {
-  background-color:lightgreen;
+  background-color: lightgreen;
 }
 
 .color-4 {
-  background-color:YELLOW;
+  background-color: YELLOW;
 }
 
 .color-5 {
-background-color:black;
-z-index: 1;
+  background-color: black;
+  z-index: 1;
 }
 .color-6 {
-  background-color:fuchsia;
+  background-color: fuchsia;
 }
 
 .color-7 {
-  background-color:red;
+  background-color: red;
 }
 
 .color-8 {
-  background-color:wheat;
+  background-color: wheat;
 }
 
 .color-9 {
-  background-color:aqua;
+  background-color: aqua;
 }
 
 .color-10 {
-background-color:lightsalmon;
+  background-color: lightsalmon;
 }
 .color-11 {
-  background-color:greenyellow;
+  background-color: greenyellow;
 }
 
 .color-12 {
-  background-color:firebrick;
+  background-color: firebrick;
 }
 
 .color-13 {
-  background-color:blueviolet;
+  background-color: blueviolet;
 }
 
 .color-14 {
-  background-color:green;
+  background-color: green;
 }
 
 .color-15 {
-background-color:rosybrown;
+  background-color: rosybrown;
 }
 .color-16 {
-  background-color:white;
+  background-color: white;
 }
 
 .color-17 {
-  background-color:purple;
+  background-color: purple;
 }
 
 .color-18 {
-  background-color:blue;
+  background-color: blue;
 }
 
 .color-19 {
-  background-color:pink;
+  background-color: pink;
 }
 
-.color-20{
-background-color:olivedrab;
-z-index: 1;
+.color-20 {
+  background-color: olivedrab;
+  z-index: 1;
 }
-
-
 
 /* Toggle Button */
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
-  
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
 label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 50px;
-	height: 25px;
-	background: grey;
-	display: block;
-	border-radius: 100px;
-	position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
 }
 
 label:after {
-	content: '';
-	position: absolute;
-	top: 1.3px;
-	left: 1.3px;
-	width: 22.5px;
-	height:22.5px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
+  content: '';
+  position: absolute;
+  top: 1.3px;
+  left: 1.3px;
+  width: 22.5px;
+  height: 22.5px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
 }
 
 input:checked + label {
-	background:black;
+  background: black;
 }
 
 input:checked + label:after {
-	left: calc(100% - 2px);
-	transform: translateX(-100%);
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
 }
 
 label:active:after {
-	width: 70px;
+  width: 70px;
+}
+@media only screen and (max-width: 700px) {
+  .canvas {
+    width: 90vw;
+    height: 50vh;
+  }
 }

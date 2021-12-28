@@ -33,11 +33,6 @@ while (count <= gridWidth * gridWidth) {
 
 
 
-
-
-
-
-
 //add eventListeners to the colors that exist
 //replaces the 'current color' with the one thats clicked(paint brush) 
 
@@ -61,6 +56,7 @@ for(const brushColor of brushColors){
 
 // adding event listener for all squares on canvas
 // for when clicked
+
 const canvasSquares = document.querySelectorAll('.square');
 for (const square of canvasSquares){
   square.addEventListener('click', squareClicked);
